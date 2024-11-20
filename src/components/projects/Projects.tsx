@@ -26,7 +26,7 @@ export function Projects() {
       image: "/assets/projects/gallery.png",
       liveUrl: "https://landing-pages-designs.netlify.app/",
       repoUrl: "https://github.com/Ayban-17/landing-pages-designs",
-      category: "Frontend"
+      category: "Next Js"
     },
     {
       id: "buife",
@@ -35,7 +35,7 @@ export function Projects() {
       image: "/assets/projects/gpt3.png",
       liveUrl: "https://gpt-3-front-end-app.netlify.app/",
       repoUrl: "https://github.com/Ayban-17/gpt-3-front-end-Application",
-      category: "Frontend"
+      category: "React JS"
     },
     {
       id: "njicbwv",
@@ -44,7 +44,7 @@ export function Projects() {
       image: "/assets/projects/space-tourism.png",
       liveUrl: "https://ayban-17.github.io/space-tourism/",
       repoUrl: "https://github.com/Ayban-17/space-tourism",
-      category: "Frontend"
+      category: "HTML CSS JS"
     },
     {
       id: "buvker",
@@ -53,7 +53,7 @@ export function Projects() {
       image: "/assets/projects/youtube.png",
       liveUrl: "https://ayban-17.github.io/YouTube-Clone/",
       repoUrl: "https://github.com/Ayban-17/YouTube-Clone",
-      category: "Frontend"
+      category: "HTML CSS JS"
     },
     {
       id: "buvikfe",
@@ -62,17 +62,17 @@ export function Projects() {
       image: "/assets/projects/bulsu.png",
       liveUrl: "https://ayban-17.github.io/BulSU-Archive-funtional-frontend-Javscript-html-css/",
       repoUrl: "https://github.com/Ayban-17/BulSU-Archive-funtional-frontend-Javscript-html-css",
-      category: "Frontend"
+      category: "HTML CSS JS"
     },
-    {
-      id: "bhjefcve",
-      name: "Mern Family App",
-      desc: "The MERN Family App is a comprehensive project in which I developed a full-stack application, leveraging the power of MongoDB, Express, React, and Node.js. I successfully implemented CRUD functionality, making it a highly functional web application.",
-      image: "/assets/projects/mern.png",
-      liveUrl: "https://mern-family-app.vercel.app/",
-      repoUrl: "https://github.com/Ayban-17/MERN-family-app",
-      category: "Full Stack"
-    },
+    // {
+    //   id: "bhjefcve",
+    //   name: "Mern Family App",
+    //   desc: "The MERN Family App is a comprehensive project in which I developed a full-stack application, leveraging the power of MongoDB, Express, React, and Node.js. I successfully implemented CRUD functionality, making it a highly functional web application.",
+    //   image: "/assets/projects/mern.png",
+    //   liveUrl: "https://mern-family-app.vercel.app/",
+    //   repoUrl: "https://github.com/Ayban-17/MERN-family-app",
+    //   category: "Full Stack"
+    // },
     {
       id: "bviev",
       name: "Animenia",
@@ -80,7 +80,7 @@ export function Projects() {
       image: "/assets/projects/animenia.png",
       liveUrl: "https://b8vz5k.csb.app/",
       repoUrl: "https://codesandbox.io/s/animenia-b8vz5k",
-      category: "Frontend"
+      category: "React JS"
     },
   ];
 
