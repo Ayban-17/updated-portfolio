@@ -29,6 +29,33 @@ export function Projects() {
       category: "Next Js"
     },
     {
+      id: "lux2", 
+      name: "Luxury",
+      desc: "Luxurious aesthetics with premium feel and sophisticated interactions, ideal for high-end brands and services that want to convey elegance and exclusivity.",
+      image: "/assets/projects/luxe.png",
+      liveUrl: "/luxury",
+      repoUrl: "/luxury", 
+      category: "Next Js"
+    },
+    {
+      id: "mod3",
+      name: "Modern",
+      desc: "Dynamic layouts with immersive animations and modern components, designed for contemporary websites that want to showcase innovation and creativity.",
+      image: "/assets/projects/modern.png",
+      liveUrl: "/modern",
+      repoUrl: "/modern",
+      category: "Next Js"
+    },
+    {
+      id: "min1",
+      name: "Minimalist",
+      desc: "Clean, minimalist aesthetic with bold typography and smooth interactions, perfect for modern and sleek web applications that prioritize simplicity and user experience.",
+      image: "/assets/projects/minimalist.png", 
+      liveUrl: "/minimalist",
+      repoUrl: "/minimalist",
+      category: "Next Js"
+    },
+    {
       id: "buife",
       name: "GPT 3 Front End Application",
       desc: "I have proficiently crafted a front-end application using the technologies of React, TypeScript, and Tailwind CSS. This application is meticulously designed to offer a seamless and responsive user experience across various devices, including mobile, tablet, and desktop platforms.",
@@ -82,6 +109,7 @@ export function Projects() {
       repoUrl: "https://codesandbox.io/s/animenia-b8vz5k",
       category: "React JS"
     },
+    
   ];
 
   // Get unique categories from projects
