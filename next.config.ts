@@ -5,7 +5,9 @@ const nextConfig: NextConfig = {
     domains: [
       // Add your image domains here
       'your-image-domain.com',
-      'another-domain.com'
+      'another-domain.com',
+      "images.remotePatterns"
+      
     ],
   },
 }
