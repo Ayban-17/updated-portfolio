@@ -1,0 +1,75 @@
+// prisma/schema.prisma
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model HeroContent {
+  id          String   @id @default(cuid())
+  name        String
+  roles       String[]
+  description String
+  techStack   TechStack[]
+  skills      Skill[]
+  stats       Stat[]
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model TechStack {
+  id            String      @id @default(cuid())
+  name          String
+  heroContentId String
+  heroContent   HeroContent @relation(fields: [heroContentId], references: [id])
+}
+
+model Skill {
+  id            String      @id @default(cuid())
+  icon          String
+  label         String
+  description   String
+  heroContentId String
+  heroContent   HeroContent @relation(fields: [heroContentId], references: [id])
+}
+
+model Stat {
+  id            String      @id @default(cuid())
+  label         String
+  value         String
+  heroContentId String
+  heroContent   HeroContent @relation(fields: [heroContentId], references: [id])
+}
+
+// Add this to your existing schema.prisma
+
+model BlogPost {
+  id          String      @id @default(cuid())
+  title       String
+  slug        String      @unique  // for URLs like /blog/how-to-code
+  excerpt     String      // short preview
+  content     String      @db.Text  // full blog content
+  coverImage  String?     // URL to image
+  category    String
+  tags        String[]
+  readTime    String      // like "5 min"
+  published   Boolean     @default(false)
+  publishedAt DateTime?
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+  author      Author      @relation(fields: [authorId], references: [id])
+  authorId    String
+}
+
+model Author {
+  id          String      @id @default(cuid())
+  name        String
+  avatarUrl   String?
+  bio         String?
+  posts       BlogPost[]
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+}

@@ -1,0 +1,58 @@
+[
+  {
+    "id": "buife",
+    "name": "GPT 3 Front End Application",
+    "desc": "I have proficiently crafted a front-end application using the technologies of React, TypeScript, and Tailwind CSS. This application is meticulously designed to offer a seamless and responsive user experience across various devices, including mobile, tablet, and desktop platforms.",
+    "image": "https://placehold.co/600x400",
+    "liveUrl": "https://gpt-3-front-end-app.netlify.app/",
+    "repoUrl": "https://github.com/Ayban-17/gpt-3-front-end-Application"
+  },
+  {
+    "id": "bvhife",
+    "name": "Code Debugger",
+    "desc": "I have developed an advanced web application known as Code Debugger, designed to efficiently debug incorrect code. This project represents my commitment to the field of software development, and I've chosen to donate it to my organization as a part of my legacy. It showcases my exceptional skills in working with APIs, particularly the integration of OpenAI API, and utilizes a cutting-edge technology stack that includes React, Tailwind CSS, and Material UI.",
+    "image": "https://placehold.co/600x400",
+    "liveUrl": "https://code-debugger.vercel.app/",
+    "repoUrl": "https://github.com/Ayban-17/code-debugger"
+  },
+  {
+    "id": "bhjefcve",
+    "name": "Mern Family App",
+    "desc": "The MERN Family App is a comprehensive project in which I developed a full-stack application, leveraging the power of MongoDB, Express, React, and Node.js. I successfully implemented CRUD (Create, Read, Update, Delete) functionality, making it a highly functional web application. This project demonstrates my proficiency in building end-to-end applications, combining frontend technologies like React with backend technologies like Node.js and Express. I also ensured an intuitive and visually appealing user interface by incorporating Material UI.",
+    "image": "https://placehold.co/600x400",
+    "liveUrl": "https://mern-family-app.vercel.app/",
+    "repoUrl": "https://github.com/Ayban-17/MERN-family-app"
+  },
+  {
+    "id": "bviev",
+    "name": "Animenia",
+    "desc": "Animenia represents my first foray into React development. This project caters to anime enthusiasts by providing a platform that displays comprehensive anime information and captivating poster images, sourced through the Kitsu anime API. It showcases my ability to work with React and effectively integrate external APIs to provide valuable content to users.",
+    "image": "https://placehold.co/600x400",
+    "liveUrl": "https://b8vz5k.csb.app/",
+    "repoUrl": "https://codesandbox.io/s/animenia-b8vz5k"
+  },
+  {
+    "id": "njicbwv",
+    "name": "Space Tourism",
+    "desc": "Space Tourism is a modern, visually captivating website that I created as part of a Front-end Mentor challenge. It features an animated hero section, informative content with images, and a fully responsive layout, catering to the modern web design standards. This project highlights my attention to detail and my skills in web design and development, using HTML, CSS, and JavaScript to create a responsive and engaging user experience.",
+    "image": "https://placehold.co/600x400",
+    "liveUrl": "https://ayban-17.github.io/space-tourism/",
+    "repoUrl": "https://github.com/Ayban-17/space-tourism"
+  },
+  {
+    "id": "buvker",
+    "name": "Youtube Clone",
+    "desc": "The YouTube Clone project was undertaken as a challenge to test and showcase my web development skills. It serves as a testament to my web development proficiency, demonstrating my experience in implementing complex features. I recreated the look and feel of YouTube using HTML, CSS, and JavaScript, showcasing my mastery of web development.",
+    "image": "https://placehold.co/600x400",
+    "liveUrl": "https://ayban-17.github.io/YouTube-Clone/",
+    "repoUrl": "https://github.com/Ayban-17/YouTube-Clone"
+  },
+  {
+    "id": "buvikfe",
+    "name": "BulSU Archive",
+    "desc": "This is a functional frontend for BulSU Archive website using HTML, CSS, and JavaScript. Website features an intuitive and user-friendly interface, responsive design, and dynamic search functionality.",
+    "image": "https://placehold.co/600x400",
+    "liveUrl": "https://ayban-17.github.io/BulSU-Archive-funtional-frontend-Javscript-html-css/",
+    "repoUrl": "https://github.com/Ayban-17/BulSU-Archive-funtional-frontend-Javscript-html-css"
+  }
+]
