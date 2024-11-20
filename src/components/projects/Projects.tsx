@@ -33,8 +33,8 @@ export function Projects() {
       name: "Luxury",
       desc: "Luxurious aesthetics with premium feel and sophisticated interactions, ideal for high-end brands and services that want to convey elegance and exclusivity.",
       image: "/assets/projects/luxe.png",
-      liveUrl: "/luxury",
-      repoUrl: "/luxury", 
+      liveUrl: "https://landing-pages-designs.netlify.app//luxury",
+      repoUrl: "https://github.com/Ayban-17/landing-pages-designs", 
       category: "Next Js"
     },
     {
@@ -42,8 +42,8 @@ export function Projects() {
       name: "Modern",
       desc: "Dynamic layouts with immersive animations and modern components, designed for contemporary websites that want to showcase innovation and creativity.",
       image: "/assets/projects/modern.png",
-      liveUrl: "/modern",
-      repoUrl: "/modern",
+      liveUrl: "https://landing-pages-designs.netlify.app//modern",
+      repoUrl: "https://github.com/Ayban-17/landing-pages-designs",
       category: "Next Js"
     },
     {
@@ -51,8 +51,8 @@ export function Projects() {
       name: "Minimalist",
       desc: "Clean, minimalist aesthetic with bold typography and smooth interactions, perfect for modern and sleek web applications that prioritize simplicity and user experience.",
       image: "/assets/projects/minimalist.png", 
-      liveUrl: "/minimalist",
-      repoUrl: "/minimalist",
+      liveUrl: "https://landing-pages-designs.netlify.app//minimalist",
+      repoUrl: "https://github.com/Ayban-17/landing-pages-designs",
       category: "Next Js"
     },
     {
