@@ -15,21 +15,23 @@ export default function Hero() {
   useEffect(() => {
     setIsClient(true);
     
-    const interval = setInterval(() => {
-      setCurrentRoleIndex((prev) => (prev + 1) % roles.length);
-    }, 3000);
+    if (roles.length > 0) {
+      const interval = setInterval(() => {
+        setCurrentRoleIndex((prev) => (prev + 1) % roles.length);
+      }, 3000);
 
-    const handleMouseMove = (e: MouseEvent) => {
-      setMousePosition({ x: e.clientX, y: e.clientY });
-    };
+      const handleMouseMove = (e: MouseEvent) => {
+        setMousePosition({ x: e.clientX, y: e.clientY });
+      };
 
-    window.addEventListener('mousemove', handleMouseMove);
-    
-    return () => {
-      clearInterval(interval);
-      window.removeEventListener('mousemove', handleMouseMove);
-    };
-  }, []);
+      window.addEventListener('mousemove', handleMouseMove);
+      
+      return () => {
+        clearInterval(interval);
+        window.removeEventListener('mousemove', handleMouseMove);
+      };
+    }
+  }, [roles.length]);
 
   // Simple loading state
   if (!isClient) {
@@ -84,7 +86,7 @@ export default function Hero() {
             className="mb-6 inline-block"
           >
             <span className="text-xl bg-gradient-to-r from-pink-500 to-violet-500 text-transparent bg-clip-text">
-              Hello World! I'm
+              Hello World! I&apos;m
             </span>
           </motion.div>
 
@@ -227,7 +229,7 @@ export default function Hero() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              Let's Connect 👋
+              Let&apos;s Connect 👋
             </motion.a>
           </motion.div>
         </motion.div>

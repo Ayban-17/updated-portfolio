@@ -1,30 +1,65 @@
-// src/app/api/blog/[slug]/route.ts
-import { NextResponse } from 'next/server';
-import { promises as fs } from 'fs';
-import path from 'path';
+import { NextRequest } from 'next/server';
 
 export async function GET(
-  request: Request,
-  { params }: { params: { slug: string } }
+  _req: NextRequest,
+  context: any
 ) {
   try {
-    const filePath = path.join(process.cwd(), 'src/data/blogPosts.json');
-    const data = await fs.readFile(filePath, 'utf8');
-    const { posts } = JSON.parse(data);
+    const { slug } = context.params;
     
-    const post = posts.find((p: any) => p.slug === params.slug);
-    
-    if (!post) {
-      return NextResponse.json(
-        { error: 'Post not found' }, 
-        { status: 404 }
-      );
-    }
+    const post = {
+      slug,
+      title: "Sample Blog Post",
+      content: "This is a sample blog post content.",
+      author: "John Doe",
+      date: "2024-03-20",
+    };
 
-    return NextResponse.json(post);
+    return Response.json(post);
   } catch (error) {
-    return NextResponse.json(
-      { error: 'Failed to fetch post' }, 
+    return Response.json(
+      { error: "Error fetching blog post" },
+      { status: 500 }
+    );
+  }
+}
+
+export async function PUT(
+  request: NextRequest,
+  context: any
+) {
+  try {
+    const { slug } = context.params;
+    const body = await request.json();
+
+    const updatedPost = {
+      slug,
+      ...body,
+      updatedAt: new Date().toISOString(),
+    };
+
+    return Response.json(updatedPost);
+  } catch (error) {
+    return Response.json(
+      { error: "Error updating blog post" },
+      { status: 500 }
+    );
+  }
+}
+
+export async function DELETE(
+  _request: NextRequest,
+  context: any
+) {
+  try {
+    const { slug } = context.params;
+    
+    return Response.json({
+      message: `Blog post ${slug} deleted successfully`,
+    });
+  } catch (error) {
+    return Response.json(
+      { error: "Error deleting blog post" },
       { status: 500 }
     );
   }

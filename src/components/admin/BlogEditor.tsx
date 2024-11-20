@@ -11,12 +11,10 @@ import Highlight from '@tiptap/extension-highlight';
 import { motion } from 'framer-motion';
 import { 
   Bold, Italic, Link as LinkIcon, Image as ImageIcon, 
-  List, Heading, Quote, AlignLeft, AlignCenter, 
+  List, Quote, AlignLeft, AlignCenter, 
   AlignRight, Strikethrough, Code, Undo, Redo,
   Type, Palette, Highlighter, ListOrdered
 } from 'lucide-react';
-
-
 
 interface BlogEditorProps {
   initialContent: string;
@@ -51,7 +49,7 @@ export function BlogEditor({ initialContent, onUpdate }: BlogEditorProps) {
 
   if (!editor) return null;
 
-  const headingSizes = [1, 2, 3, 4, 5, 6];
+  const headingSizes = [1, 2, 3, 4, 5, 6] as const;
   const colors = ['#000000', '#EF4444', '#F59E0B', '#10B981', '#3B82F6', '#8B5CF6'];
   const highlightColors = ['#FEF08A', '#FDE68A', '#E9D5FF', '#BFDBFE', '#BBF7D0'];
 

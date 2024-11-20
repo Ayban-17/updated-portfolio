@@ -15,7 +15,7 @@ export default function ContactPage() {
         {/* Header */}
         <section className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600">
-            Let's Connect! 👋
+            Let&apos;s Connect! 👋
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
             Got a question or proposal, or just want to say hello? Go ahead.

@@ -1,6 +1,49 @@
 import { prisma } from '@/lib/prisma'
 import { NextResponse } from 'next/server'
 
+interface HeroContentBody {
+  id?: string
+  name: string
+  roles: string[]
+  description: string
+  techStack?: string[]
+  skills?: Array<{
+    name: string
+    level: number
+    icon: string
+    label: string 
+    description: string
+  }>
+  stats?: Array<{
+    label: string
+    value: string
+  }>
+}
+
+interface UpdateData {
+  name?: string
+  roles?: string[]
+  description?: string
+  techStack?: {
+    deleteMany: Record<string, never>
+    create: Array<{name: string}>
+  }
+  skills?: {
+    deleteMany: Record<string, never>
+    create: Array<{
+      name: string
+      level: number
+      icon: string
+      label: string
+      description: string
+    }>
+  }
+  stats?: {
+    deleteMany: Record<string, never>
+    create: Array<{label: string, value: string}>
+  }
+}
+
 export async function GET() {
   try {
     const heroContent = await prisma.heroContent.findFirst({
@@ -30,7 +73,7 @@ export async function GET() {
 
 export async function POST(request: Request) {
   try {
-    const body = await request.json()
+    const body: HeroContentBody = await request.json()
     
     // Basic validation
     if (!body.name || !body.roles || !body.description) {
@@ -46,12 +89,18 @@ export async function POST(request: Request) {
         roles: body.roles,
         description: body.description,
         techStack: {
-          create: body.techStack?.map((tech: string) => ({
+          create: body.techStack?.map((tech) => ({
             name: tech,
           })) || [],
         },
         skills: {
-          create: body.skills || [],
+          create: body.skills?.map(skill => ({
+            name: skill.name,
+            level: skill.level,
+            icon: skill.icon,
+            label: skill.label,
+            description: skill.description
+          })) || [],
         },
         stats: {
           create: body.stats || [],
@@ -76,7 +125,7 @@ export async function POST(request: Request) {
 
 export async function PUT(request: Request) {
   try {
-    const body = await request.json()
+    const body: HeroContentBody = await request.json()
     
     if (!body.id) {
       return NextResponse.json(
@@ -98,7 +147,7 @@ export async function PUT(request: Request) {
     }
 
     // Build update data based on what's provided
-    const updateData: any = {}
+    const updateData: UpdateData = {}
     
     if (body.name) updateData.name = body.name
     if (body.roles) updateData.roles = body.roles
@@ -108,7 +157,7 @@ export async function PUT(request: Request) {
     if (body.techStack) {
       updateData.techStack = {
         deleteMany: {},
-        create: body.techStack.map((tech: string) => ({
+        create: body.techStack.map((tech) => ({
           name: tech,
         })),
       }
@@ -117,7 +166,13 @@ export async function PUT(request: Request) {
     if (body.skills) {
       updateData.skills = {
         deleteMany: {},
-        create: body.skills,
+        create: body.skills.map(skill => ({
+          name: skill.name,
+          level: skill.level,
+          icon: skill.icon,
+          label: skill.label,
+          description: skill.description
+        })),
       }
     }
 
@@ -148,7 +203,6 @@ export async function PUT(request: Request) {
   }
 }
 
-// Optional: Add DELETE method
 export async function DELETE(request: Request) {
   try {
     const { searchParams } = new URL(request.url)

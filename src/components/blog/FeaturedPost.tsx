@@ -1,7 +1,7 @@
-
 // src/components/blog/FeaturedPost.tsx
 'use client';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 export function FeaturedPost() {
   return (
@@ -13,10 +13,13 @@ export function FeaturedPost() {
       <div className="bg-white dark:bg-gray-800 rounded-xl overflow-hidden">
         <div className="grid md:grid-cols-2 gap-6">
           <div className="aspect-video md:aspect-auto relative">
-            <img 
-              src="https://www.skyadesigns.co.uk/wp-content/uploads/2023/05/5-best-tools-for-web-designers-in-2023.jpg" 
-              alt="Featured post" 
-              className="w-full h-full object-cover"
+            <Image
+              src="https://www.skyadesigns.co.uk/wp-content/uploads/2023/05/5-best-tools-for-web-designers-in-2023.jpg"
+              alt="Featured post"
+              width={800}
+              height={400}
+              className="w-full h-full object-cover rounded-lg"
+              priority
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
           </div>
@@ -31,10 +34,13 @@ export function FeaturedPost() {
               Learn how to build scalable web applications using Next.js, TypeScript, and modern best practices.
             </p>
             <div className="flex items-center gap-4">
-              <img 
-                src="https://www.skyadesigns.co.uk/wp-content/uploads/2023/05/5-best-tools-for-web-designers-in-2023.jpg" 
-                alt="Author" 
+              <Image
+                src="https://www.skyadesigns.co.uk/wp-content/uploads/2023/05/5-best-tools-for-web-designers-in-2023.jpg"
+                alt="Author"
+                width={40}
+                height={40}
                 className="w-10 h-10 rounded-full"
+                priority
               />
               <div>
                 <p className="font-medium text-gray-900 dark:text-white">Your Name</p>
