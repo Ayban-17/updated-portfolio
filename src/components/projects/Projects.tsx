@@ -20,6 +20,24 @@ export function Projects() {
 
   const projects: Project[] = [
     {
+      id: "buvfoiesuv",
+      name: "Automobile Marketplace",
+      desc: "Modern automotive marketplace featuring AI-powered vehicle recommendations, 360° virtual tours, and real-time price analytics. Includes advanced filtering, comparison tools, and direct dealer communication.",
+      image: "/assets/projects/automobile.png",
+      liveUrl: "https://landing-pages-designs.netlify.app/automobile",
+      repoUrl: "https://github.com/Ayban-17/landing-pages-designs",
+      category: "Next Js"
+    },
+    {
+      id: "jiqdf",
+      name: "Futuristic Design",
+      desc: "Next-generation portfolio website with 3D animations, particle effects, and interactive project showcases. Features dynamic theming, gesture controls, and WebGL-powered visualizations.",
+      image: "/assets/projects/futuristic.png",
+      liveUrl: "https://landing-pages-designs.netlify.app/futuristic",
+      repoUrl: "https://github.com/Ayban-17/landing-pages-designs",
+      category: "Next Js"
+    },
+    {
       id: "ueowkf",
       name: "Landing Page Gallery",
       desc: "I have proficiently crafted a front-end application using the technologies of React, TypeScript, and Tailwind CSS. This application is meticulously designed to offer a seamless and responsive user experience across various devices, including mobile, tablet, and desktop platforms.",

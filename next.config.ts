@@ -6,8 +6,8 @@ const nextConfig: NextConfig = {
       // Add your image domains here
       'your-image-domain.com',
       'another-domain.com',
-      "images.remotePatterns"
-      
+      "images.remotePatterns",
+      "www.skyadesigns.co.uk"
     ],
   },
 }
